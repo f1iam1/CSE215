@@ -1,3 +1,12 @@
+/*
+7.2
+(Reverse the numbers entered) Write a program that reads ten integers and dis-
+plays them in the reverse of the order in which they were read.
+
+Enter 10 numbers: 1 2 3 4 5 6 7 8 9 10
+Reverse 10 numbers: 10 9 8 7 6 5 4 3 2 1
+*/
+
 import java.util.Scanner;
 
 public class p72 {
