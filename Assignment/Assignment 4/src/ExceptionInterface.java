@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class ExceptionInterface {
+import java.io.IOException;
+
+public interface ExceptionInterface {
+    void setRadius(double newRadius) throws IllegalArgumentException;
 }
