@@ -25,16 +25,15 @@ public class Rectangle extends GeometricObject implements ExceptionInterface {
     /**
      * Set a new width value
      */
-    public void setWidth(double width) {
+    public void setWidth(double width) throws IllegalArgumentException {
         try {
             if (width >= 0) {
                 this.width = width;
             } else {
-                this.width = 0;
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("The value of width is NEGATIVE");
             }
         } catch (IllegalArgumentException e) {
-            System.out.println("An exception occurred: " + "Width value can not be negative.");
+            System.out.println("EXCEPTION_OCCURRED: " + e.getMessage());
         }
     }
 
@@ -53,11 +52,10 @@ public class Rectangle extends GeometricObject implements ExceptionInterface {
             if (height >= 0) {
                 this.height = height;
             } else {
-                this.height = 0;
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("The value of height is NEGATIVE");
             }
         } catch (IllegalArgumentException e) {
-            System.out.println("An exception occurred: " + "Height value can not be negative.");
+            System.out.println("EXCEPTION_OCCURRED: " + e.getMessage());
         }
     }
 
@@ -74,7 +72,7 @@ public class Rectangle extends GeometricObject implements ExceptionInterface {
      */
     @Override
     public double getPerimeter() {
-        return 2 * (width * height);
+        return 2 * (width + height);
     }
 
     @Override

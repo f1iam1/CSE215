@@ -3,13 +3,13 @@ import java.util.Date;
 public abstract class GeometricObject {
     private String color = "white";
     private boolean filled;
-    private java.util.Date dateCreated;
+    private final java.util.Date dateCreated;
 
     /**
      * Construct a default geometric object with date value
      */
     protected GeometricObject() {
-        dateCreated = new java.util.Date();
+        dateCreated = new Date();
     }
 
     /**
