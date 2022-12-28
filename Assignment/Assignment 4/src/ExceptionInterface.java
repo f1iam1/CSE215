@@ -1,5 +1,11 @@
-import java.io.IOException;
-
 public interface ExceptionInterface {
-    void setRadius(double newRadius) throws IllegalArgumentException;
+    /**
+     * Throws exception if the value of width is negative
+     */
+    void setWidth(double width) throws IllegalArgumentException;
+
+    /**
+     * Throws exception if the value of height is negative
+     */
+    void setHeight(double height) throws IllegalArgumentException;
 }

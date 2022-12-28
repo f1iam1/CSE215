@@ -1,75 +1,77 @@
+import java.util.Date;
+
 public abstract class GeometricObject {
     private String color = "white";
     private boolean filled;
     private java.util.Date dateCreated;
 
     /**
-     * Construct a default geometric object
+     * Construct a default geometric object with date value
      */
     protected GeometricObject() {
         dateCreated = new java.util.Date();
     }
 
     /**
-     * Construct a geometric object with color and filled value
+     * Construct a geometric object with color, filled, date value
      */
-    protected GeometricObject(String color, boolean filled) {
-        dateCreated = new java.util.Date();
+    public GeometricObject(String color, boolean filled, Date dateCreated) {
         this.color = color;
         this.filled = filled;
+        this.dateCreated = new java.util.Date();
     }
 
     /**
-     * Return color
+     * Return color value
      */
     public String getColor() {
         return color;
     }
 
     /**
-     * Set a new color
+     * Set a new color value
      */
     public void setColor(String color) {
         this.color = color;
     }
 
     /**
-     * Return filled. Since filled is boolean,
-     * the get method is named isFilled
+     * Return filled value
      */
     public boolean isFilled() {
         return filled;
     }
 
     /**
-     * Set a new filled
+     * Set a new filled value
      */
     public void setFilled(boolean filled) {
         this.filled = filled;
     }
 
     /**
-     * Get dateCreated
+     * Return date value
      */
-    public java.util.Date getDateCreated() {
+    public Date getDateCreated() {
         return dateCreated;
     }
 
-    /**
-     * Return a string representation of this object
-     */
+    @Override
     public String toString() {
-        return "created on " + dateCreated + "\ncolor: " + color +
-                " and filled: " + filled;
+        return "GeometricObject{" +
+                "color='" + color + '\'' +
+                ", filled=" + filled +
+                ", dateCreated=" + dateCreated +
+                '}';
     }
 
     /**
-     * Abstract method getArea
+     * Abstract method to return area of a geometric object
      */
     public abstract double getArea();
 
     /**
-     * Abstract method getPerimeter
+     * Abstract method to return perimeter of a geometric Object
      */
     public abstract double getPerimeter();
 }
