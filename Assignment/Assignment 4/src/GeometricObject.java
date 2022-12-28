@@ -3,7 +3,7 @@ import java.util.Date;
 public abstract class GeometricObject {
     private String color = "white";
     private boolean filled;
-    private final java.util.Date dateCreated;
+    private final Date dateCreated;
 
     /**
      * Construct a default geometric object with date value
